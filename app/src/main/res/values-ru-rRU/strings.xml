@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lorem Picsum Explorer</string>
+
+    <string name="error_message">Сообщение об ошибке</string>
+
+    <string name="image_item">Элемент изображения</string>
+
+    <string name="invalid_height">Неверная высота! Верные значения с %1$d по %2$d.</string>
+    <string name="invalid_initial_page_size">Неверный размер первой страницы! Верные значения с %1$d по %2$d.</string>
+    <string name="invalid_page_size">Неверный размер страницы! Верные значения с %1$d по %2$d.</string>
+    <string name="invalid_width">Неверная ширина! Верные значения с %1$d по %2$d.</string>
+
+    <string name="setting_initial_load">Число фото в первой загрузке:</string>
+    <string name="setting_per_page">Число фото на странице:</string>
+    <string name="setting_photo_height">Предпочитаемая высота фото:</string>
+    <string name="setting_photo_width">Предпочитаемая ширина фото:</string>
+
+    <string name="title_favorites">Избранное</string>
+    <string name="title_home">Главная</string>
+    <string name="title_settings">Настройки</string>
+    <string name="add_to_favorites_description">Добавление фото в избранное.</string>
+</resources>

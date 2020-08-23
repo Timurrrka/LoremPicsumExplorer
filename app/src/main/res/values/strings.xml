@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lorem Picsum Explorer</string>
+
+    <string name="error_message">Error message</string>
+
+    <string name="image_item">Image item</string>
+
+    <string name="invalid_height">Invalid height! Valid values are from %1$d to %2$d.</string>
+    <string name="invalid_initial_page_size">Invalid initial page size! Valid values are from %1$d to %2$d.</string>
+    <string name="invalid_page_size">Invalid page size! Valid values are from %1$d to %2$d.</string>
+    <string name="invalid_width">Invalid width! Valid values are from %1$d to %2$d.</string>
+
+    <string name="setting_initial_load">Load photos on initial load:</string>
+    <string name="setting_per_page">Load photos per page:</string>
+    <string name="setting_photo_height">Preferable height of photos:</string>
+    <string name="setting_photo_width">Preferable width of photos:</string>
+
+    <string name="title_favorites">Favorites</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="add_to_favorites_description">Save photo to the favorites.</string>
+</resources>

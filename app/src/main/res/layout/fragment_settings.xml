@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glSettingsVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <EditText
+        android:id="@+id/editTextPhotoWidth"
+        style="@style/SettingEditTextNumber"
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhotoHeight"
+        style="@style/SettingEditTextNumber"
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhotoWidth" />
+
+    <EditText
+        android:id="@+id/editTextPerPage"
+        style="@style/SettingEditTextNumber"
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhotoHeight" />
+
+    <EditText
+        android:id="@+id/editTextInitialLoad"
+        style="@style/SettingEditTextNumber"
+        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPerPage" />
+
+    <TextView
+        android:id="@+id/labelPhotoWidth"
+        style="@style/SettingLabel"
+        android:labelFor="@id/editTextPhotoWidth"
+        android:text="@string/setting_photo_width"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhotoWidth"
+        app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhotoWidth" />
+
+    <TextView
+        android:id="@+id/labelPhotoHeight"
+        style="@style/SettingLabel"
+        android:labelFor="@id/editTextPhotoHeight"
+        android:text="@string/setting_photo_height"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhotoHeight"
+        app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhotoHeight" />
+
+
+    <TextView
+        android:id="@+id/labelPerPage"
+        style="@style/SettingLabel"
+        android:labelFor="@id/editTextPerPage"
+        android:text="@string/setting_per_page"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPerPage"
+        app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toTopOf="@+id/editTextPerPage" />
+
+    <TextView
+        android:id="@+id/labelInitialLoad"
+        style="@style/SettingLabel"
+        android:labelFor="@id/editTextInitialLoad"
+        android:text="@string/setting_initial_load"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextInitialLoad"
+        app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
+        app:layout_constraintTop_toTopOf="@+id/editTextInitialLoad" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_menu_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
