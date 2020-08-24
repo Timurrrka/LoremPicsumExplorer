@@ -59,6 +59,7 @@ class HomeFragment : Fragment() {
         super.onResume()
         mainActivity.setOnSettingsItemClick { openSettings() }
         errorListener.onSuccess()
+        if (::networkPhotosAdapter.isInitialized) networkPhotosAdapter.currentList?.dataSource?.invalidate()
     }
 
     private fun setupRecyclerView() {

@@ -58,11 +58,13 @@ class MainActivity : AppCompatActivity(),
         return true
     }
 
-    private fun getDisplayDimension(): Pair<Int, Int> {
-        val metrics = DisplayMetrics()
-        this.windowManager.defaultDisplay.getMetrics(metrics)
-        return Pair(metrics.widthPixels, metrics.heightPixels)
-    }
+    private fun getDisplayDimension(): Pair<Int, Int>  =
+        DisplayMetrics().let {
+            this.windowManager.defaultDisplay.getMetrics(it)
+            val w = it.widthPixels / it.density
+            val h = it.heightPixels / it.density
+            Pair(w.toInt(), h.toInt())
+        }
 
     override fun calculateColumns(): Int {
         val photoWidth = MainApp.preferences
