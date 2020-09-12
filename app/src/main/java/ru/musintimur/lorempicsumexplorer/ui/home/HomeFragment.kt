@@ -21,9 +21,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var errorListener: ThrowableCallback
     private lateinit var mainActivity: MainContract
-    private lateinit var homeViewModel: HomeViewModel
     private lateinit var networkPhotosAdapter: PhotoListAdapter
-    private lateinit var gridLayoutManager: GridLayoutManager
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -48,11 +46,11 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        homeViewModel =
+        val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        setupRecyclerView()
-        setupObservers()
+        setupRecyclerView(homeViewModel)
+        setupObservers(homeViewModel)
     }
 
     override fun onResume() {
@@ -62,23 +60,23 @@ class HomeFragment : Fragment() {
         if (::networkPhotosAdapter.isInitialized) networkPhotosAdapter.currentList?.dataSource?.invalidate()
     }
 
-    private fun setupRecyclerView() {
+    private fun setupRecyclerView(vm: HomeViewModel) {
         networkPhotosAdapter = PhotoListAdapter()
-        gridLayoutManager = GridLayoutManager(requireContext(), mainActivity.calculateColumns())
+        val gridLayoutManager = GridLayoutManager(requireContext(), mainActivity.calculateColumns())
         recyclerViewRandomPhotos.apply {
             layoutManager = gridLayoutManager
             adapter = networkPhotosAdapter
         }
         networkPhotosAdapter.onFavoriteClick = { photo, _ ->
-            if (photo.isFavorite) homeViewModel.deleteFromFavorites(photo)
-            else homeViewModel.saveToFavorites(photo, requireContext())
+            if (photo.isFavorite) vm.deleteFromFavorites(photo)
+            else vm.saveToFavorites(photo, requireContext())
         }
     }
 
-    private fun setupObservers() {
+    private fun setupObservers(vm: HomeViewModel) {
         val owner = viewLifecycleOwner
 
-        homeViewModel.run {
+        vm.run {
             getPhotos().observe(owner, Observer { photos ->
                 networkPhotosAdapter.submitList(photos)
             })

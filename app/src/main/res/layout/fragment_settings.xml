@@ -16,67 +16,94 @@
     <EditText
         android:id="@+id/editTextPhotoWidth"
         style="@style/SettingEditTextNumber"
+        android:layout_marginEnd="8dp"
         android:importantForAutofill="no"
-        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelPhotoWidth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical" />
 
     <EditText
         android:id="@+id/editTextPhotoHeight"
         style="@style/SettingEditTextNumber"
+        android:layout_marginEnd="8dp"
         android:importantForAutofill="no"
-        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhotoWidth" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelPhotoHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical" />
 
     <EditText
         android:id="@+id/editTextPerPage"
         style="@style/SettingEditTextNumber"
+        android:layout_marginEnd="8dp"
         android:importantForAutofill="no"
-        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhotoHeight" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelPerPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical" />
 
     <EditText
         android:id="@+id/editTextInitialLoad"
         style="@style/SettingEditTextNumber"
+        android:layout_marginEnd="8dp"
         android:importantForAutofill="no"
-        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPerPage" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelInitialLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glSettingsVertical" />
 
     <TextView
         android:id="@+id/labelPhotoWidth"
         style="@style/SettingLabel"
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:labelFor="@id/editTextPhotoWidth"
         android:text="@string/setting_photo_width"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPhotoWidth"
         app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toTopOf="@+id/editTextPhotoWidth" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/labelPhotoHeight"
         style="@style/SettingLabel"
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:labelFor="@id/editTextPhotoHeight"
         android:text="@string/setting_photo_height"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPhotoHeight"
         app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toTopOf="@+id/editTextPhotoHeight" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPhotoWidth" />
 
 
     <TextView
         android:id="@+id/labelPerPage"
         style="@style/SettingLabel"
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:labelFor="@id/editTextPerPage"
         android:text="@string/setting_per_page"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextPerPage"
         app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toTopOf="@+id/editTextPerPage" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPhotoHeight" />
 
     <TextView
         android:id="@+id/labelInitialLoad"
         style="@style/SettingLabel"
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:labelFor="@id/editTextInitialLoad"
         android:text="@string/setting_initial_load"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextInitialLoad"
         app:layout_constraintEnd_toStartOf="@+id/glSettingsVertical"
-        app:layout_constraintTop_toTopOf="@+id/editTextInitialLoad" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPerPage" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabSaveSettings"
